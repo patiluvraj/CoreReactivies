@@ -15,6 +15,7 @@ interface Props{
     editMode:Boolean;
     crateOrEdit:(activity:Activity)=>void;
     deleteActivity:(id:string)=>void;
+    submitting:boolean;
 }
 
 export default function ActivityDashboard(prop:Props){
@@ -25,6 +26,7 @@ export default function ActivityDashboard(prop:Props){
                 activities={prop.activities} 
                 selectActivity={prop.selectActivity} 
                 deleteActivity={prop.deleteActivity}
+                submitting={prop.submitting}
                 /> 
             </Grid.Column>
             <Grid.Column width='6'>
@@ -39,6 +41,7 @@ export default function ActivityDashboard(prop:Props){
                  formClose={prop.formClose} 
                  activity={prop.selectedActivity} 
                  crateOrEdit={prop.crateOrEdit}
+                 submitting={prop.submitting}
                 />}
             </Grid.Column>
         </Grid>
